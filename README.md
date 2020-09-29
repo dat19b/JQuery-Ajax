@@ -1,1 +1,2 @@
-# JQuery-Ajax
+# JQuery & Ajax
+Code from teachings
