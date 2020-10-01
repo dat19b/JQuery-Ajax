@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Ajax exampler</title>
+    <script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
+
+</head>
+<body>
+
+    <div class="content">
+
+
+    </div>
+
+    <script>
+        $(document).ready(function(){
+            // get
+            $.ajax({
+                method: "GET",
+                url: 'https://moviesfrontandback.herokuapp.com/api/movies'
+            }).done(function( data ) {
+                    $('.content').append(data[2].title)
+                });
+
+
+            // POST
+            $.ajax({
+                method: "POST",
+                url: 'https://moviesfrontandback.herokuapp.com/api/movies',
+                data : {title : 'Hello www',
+                releaseYear : '1200',
+                director : 'clbo',
+                genre : 'Horror'}
+
+            }).done(function( data ) {
+                alert('POST Saved ' + data)
+            });
+
+
+        })
+    </script>
+
+</body>
+</html>
