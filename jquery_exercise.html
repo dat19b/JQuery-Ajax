@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Jquery Exercise</title>
+    <script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+
+</head>
+<body>
+
+    <div class="container">
+
+    </div>
+
+    <script>
+        $(document).ready(function(){
+             $('.container').append('<h1>Jquery exercise Dat19b</h1>')
+             $('.container').append('<button class="btn btn-primary">Click me!</button>')
+             $('.container').hide()
+             $('.container').fadeIn(3000)
+
+            $('.container').append('<div id="content"></div>')
+
+            let count = 0;
+            $('button').click(function(){
+                    $('#content').append('<p id="id' + count + '" >Dette er noget tekst!</p>')
+                    $('#id' + count).hide()
+                    $('#id' + count).slideDown("slow")
+                    count++;
+             })
+            }
+
+        )
+
+
+    </script>
+
+</body>
+</html>
