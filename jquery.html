@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Finding HTML Elements by ID</title>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
+
+    <script>
+
+        // JQUERY
+        $(document).ready(
+            // callback function
+            function(){
+                // Vanilla Javascript
+                // document.getElementsByTagName('h1')[0].innerHTML = document.title //document.getElementsByTagName('title')[0].innerHTML
+
+                $("p").click(
+                    function(){
+                        $(this).hide();
+                    }
+                );
+                $('h1').text(
+                    $('title').text()
+                );
+
+
+
+            });
+
+    </script>
+
+
+</head>
+<body>
+    <h1>TEST TEST TEST</h1>
+    <p id="id01">Hello World!</p>
+    <p id="id02">Hello Sweden</p>
+    <p id="id03">Hello Japan</p>
+
+
+
+
+
+</body>
+</html>
